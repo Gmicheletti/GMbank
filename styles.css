@@ -1,0 +1,182 @@
+body{
+    background: rgb(11,40,89);
+    background: linear-gradient(100deg, rgba(11,40,89,1) 0%, rgba(5,19,42,1) 41%, rgb(0, 2, 4) 100%);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p{
+  margin: 0;
+}
+
+#sectionCard{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+#esq{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+}
+
+#dir{
+    width: 50%;
+}
+
+
+.card-box {
+    width: 700px;
+    height: 440px;
+    perspective: 1000px;
+    border-radius: 80px;
+}
+
+.card-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  
+}
+
+.card-box:hover .card-box-inner {
+  transform: rotateY(180deg);
+}
+
+.card-box-front, .card-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 16px;
+  color: #fff;
+
+}
+
+.card-box-front{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 60px;
+}
+
+
+.card-box-back {
+  transform: rotateY(180deg);
+}
+
+.gradientFront, .gradientBack {
+  background: hsla(228, 17%, 53%, 1);
+  background: linear-gradient(90deg, hsla(228, 17%, 53%, 1) 0%, hsla(229, 28%, 88%, 1) 100%);
+  background: -moz-linear-gradient(90deg, hsla(228, 17%, 53%, 1) 0%, hsla(229, 28%, 88%, 1) 100%);
+  background: -webkit-linear-gradient(90deg, hsla(228, 17%, 53%, 1) 0%, hsla(229, 28%, 88%, 1) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#727A9A", endColorstr="#D8DBE9", GradientType=1 );
+}
+
+
+
+
+#cardLogo{
+  display:flex;
+  justify-content: flex-end;
+  height: 33%;
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+#cardChip{
+  display: flex;
+  height: 33%;
+}
+
+#chip{
+  width: 100px;  
+  height: 100px;
+}
+
+#cardFooter{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+#cardDados{
+  margin-top: -20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+#cardNumber{
+  display: flex;
+  font-size: 50px;
+  word-spacing: 10px
+}
+
+#cardValid{
+  display: flex;
+  flex-direction: row;
+  column-gap: 5px;
+  font-size: 20px;
+}
+
+#cardName{
+  display: flex;
+  font-size: 30px;
+}
+
+#cardBandeira{
+  width: 100px;
+  height: 65px;
+}
+
+#barBack{
+  height: 70px;
+  background: #000;
+  margin-top: 40px
+}
+
+#cardBackDados{
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+  height: 50px;
+  margin:20px 40px;
+  padding: 0 10px;
+  background-color: rgb(154, 205, 255);
+  justify-content: flex-end;
+  align-items: center;
+  color: #000;
+  font-weight: 400;
+  font-style: italic;
+}
+
+#cardBackDados:before{
+  content: 'card card card card card card card card card card card card card card card card card card card card card card card card ';
+  position: absolute;
+  color: rgb(117, 136, 149);
+  font-size: 20px;
+  text-align: left;
+  opacity: 50%;
+  background-blend-mode: multiply;
+  height: 50px;
+  margin: 0 40px;
+}
+
+label{
+  color: #fff;
+}
+
+input{
+  border: none;
+  border-radius: 16px;
+  height: 40px;
+}
